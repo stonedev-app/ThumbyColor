@@ -2,12 +2,12 @@
 
 ![言語](https://img.shields.io/badge/言語-MicroPython-blue)
 ![デバイス](https://img.shields.io/badge/デバイス-Thumby%20Color-orange)
-![エディタ](https://img.shields.io/badge/エディタ-Claude%20Code-blueviolet)
+![AI](https://img.shields.io/badge/AI-Claude%20Code-blueviolet)
 
 ## 概要
 
 [Thumby Color](https://color.thumby.us/) 向けゲーム開発のルートリポジトリです。  
-[Claude Code](https://claude.ai/claude-code) を使った開発を想定した環境設定・ドキュメントを管理します。
+Claude Code を使った開発を想定した環境設定・ドキュメントを管理します。
 
 > **注意**: このリポジトリにゲーム本体は含まれません。各ゲームプロジェクトはフォルダごとに独立した git リポジトリで管理します。
 
@@ -22,7 +22,7 @@
 ## 前提
 
 - Thumby Color 実機、または[公式ブラウザエミュレータ](https://color.thumby.us/code/)（Chrome / Edge）
-- [Claude Code](https://claude.ai/claude-code)
+- Claude Code
 
 ## 使い方
 
