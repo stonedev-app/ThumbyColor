@@ -1,0 +1,28 @@
+# ThumbyColor ルートの git 管理方針
+#
+# このリポジトリは、全プロジェクト共通の設定・ドキュメントを管理する。
+#   - CLAUDE.md        AI開発ガイド
+#   - docs/api/        エンジン API リファレンス
+#   - .claude/commands/ Claude Code スキル（/new-game 等）
+#
+# 各ゲームプロジェクト（Sample/ Tetrumb/ 等）は対象外。
+# それぞれのフォルダで個別に git init して管理する。
+# 新規プロジェクトを作成しても、このファイルを変更する必要はない。
+
+# すべて無視
+*
+*/
+
+# 追跡するものだけ許可
+# ※ ルートに新しいファイルを追加した際はここに追記すること
+!.gitignore
+!README.md
+!CLAUDE.md
+!docs/
+!docs/**
+!.claude/
+!.claude/**
+
+# macOS 自動生成ファイルは除外（上記の許可ルールより後に書くことで上書き）
+.DS_Store
+**/.DS_Store
