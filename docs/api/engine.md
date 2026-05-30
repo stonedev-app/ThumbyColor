@@ -15,7 +15,7 @@ import engine
 | `engine.start()` | シンプルな無限ループ開始（tick不要） |
 | `engine.end()` | エンジン停止 |
 | `engine.fps_limit(fps)` | FPS上限を設定（例: `engine.fps_limit(30)`） |
-| `engine.dt()` | デルタタイム取得（秒） |
+| `engine.dt()` | 前フレームからの経過時間を取得（秒）。最初のフレームは 0.0 |
 | `engine.get_running_fps()` | 実際のFPSを取得 |
 | `engine.reset(soft_reset)` | エンジンリセット |
 | `engine.freq(hz)` | CPU周波数設定 |
@@ -31,8 +31,8 @@ engine.fps_limit(30)
 # tick型: 手続き型スタイル
 while True:
     if engine.tick():
-        dt = engine.dt()  # デルタタイム（秒）
-        # ゲームロジック（dt を使うと FPS 非依存の動きになる）
+        dt = engine.dt()  # 前フレームからの経過時間（秒）
+        # speed * dt で移動量を計算すると、処理落ち時もスローモーションにならない
 ```
 
 クラス継承型では `engine.start()` を使う（`engine_nodes.md` 参照）。
