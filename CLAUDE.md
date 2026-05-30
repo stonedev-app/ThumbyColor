@@ -11,6 +11,10 @@
   - ドキュメント一覧: https://color.thumby.us/pages/documentation-and-examples/documentation-and-examples/
   - 各APIページ: `https://color.thumby.us/doc/build/{モジュール名}.html`
   - コード例（GitHub）: https://github.com/TinyCircuits/TinyCircuits-Tiny-Game-Engine/tree/main/filesystem/Games
+  - 参考になるサンプル（コード量が少なく基本が抑えられている）:
+    - `buttons_test` — ゲームループ・ボタン入力・テキスト表示（~40行）
+    - `Font` — フォント・カスタムノード・スプライト制御（~30行）
+    - `FlappyBee` — 物理・衝突・ゲーム状態管理（~80行）
 
 ## デバイス仕様
 
