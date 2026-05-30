@@ -56,6 +56,31 @@
 - 接続: USB-C接続後、赤い停止ボタンをクリック（「>>>」で接続完了）
 - ファイル転送: View > Files → ファイルを右クリック → Upload to /Games
 
+### mpremote
+- できること: ファイル転送 / REPL / スクリプト実行（コマンドラインのみ・GUIなし）
+- macOS ポート名: `/dev/tty.usbmodem*`
+- 注意: Thonny と同時接続不可（シリアルポートの排他制御）
+
+```bash
+# デバイス一覧を確認
+mpremote devs
+
+# REPL を開く（終了: Ctrl-]）
+mpremote repl
+
+# ファイルをデバイスへアップロード（デバイス側パスに : プレフィックス必須）
+mpremote cp main.py :/Games/ゲーム名/main.py
+
+# デバイス上のファイル一覧
+mpremote fs ls /Games/ゲーム名/
+
+# スクリプトをデバイスRAM上で実行（書き込まずにテスト）
+mpremote run main.py
+
+# ディレクトリを再帰的にアップロード
+mpremote fs cp -r ゲーム名/ :/Games/ゲーム名/
+```
+
 ## プロジェクトのファイル構成
 
 ```
